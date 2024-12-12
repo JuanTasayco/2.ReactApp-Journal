@@ -1,8 +1,14 @@
 
+import { JournalLayout } from "../layout/JournalLayout";
+import { NoteView } from "../views/NoteView";
+
 export const JournalPage = () => {
+
+
   return (
-    <>
-        <h1>Journal Page</h1>ƒ
-    </>
+    <JournalLayout>
+      {/* <NothingSelectedView></NothingSelectedView> */}
+      <NoteView></NoteView>
+    </JournalLayout>
   );
 };
