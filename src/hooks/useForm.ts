@@ -10,7 +10,6 @@ export const useForm = (initialState: any) => {
 
     const onInputChange = (event: any) => {
         const { value, name } = event.target;
-
         setForm((valueForm: any) => {
             return ({
                 ...valueForm,

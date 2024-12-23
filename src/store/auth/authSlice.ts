@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    status: "checking", /* si el usuario está autenticado o No */
+    status: "not-authorized", /* si el usuario está autenticado o No */
     uid: null,
     email: null,
     displayName: null,
@@ -16,7 +16,9 @@ export const authSlice = createSlice({
     reducers: {
         login: (state, action) => { },
         logout: (state, payload) => { },
-        checkingCredentials: () => { }
+        checkingCredentials: (state) => {
+            state.status = "checked"
+        }
     }
 })
 
